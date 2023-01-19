@@ -10,10 +10,10 @@ function App() {
     <div className="my-20 ">
       <Router>
         <Routes>
-          <Route path="/" element={<Resumes />} />
+          <Route path="/resume" element={<Resumes />} />
 
           <Route path="/web" element={<Web />} />
-          <Route path="/resume-templates" element={<ResumeTemplates />} />
+          <Route path="/" element={<ResumeTemplates />} />
         </Routes>
       </Router>
     </div>
