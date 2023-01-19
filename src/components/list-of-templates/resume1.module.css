@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  .template1 {
+    grid-template-columns: 1fr 18rem;
+
+    border-left: 0.4rem solid #ff105f;
+  }
+  .template1 .large-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .template1 .tiny-content {
+    background-color: #eeecea;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .template1 .passport-box {
+    @apply w-[7rem] h-[7rem] ring-2 p-1 bg-white ring-[#333] rounded-[50%];
+  }
+  .template1 .profession {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+
+    letter-spacing: 0.1rem;
+    color: #ff105f;
+  }
+
+  .template1 .level {
+    @apply bg-[#333];
+  }
+  .template1 .passport {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 50%;
+    outline: none;
+    border: none;
+  }
+}

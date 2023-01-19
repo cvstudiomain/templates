@@ -1,0 +1,715 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&family=Poiret+One&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    /* font-size: 4.3px; */
+    /* font-size: 8px; */
+    overflow-x: hidden;
+    font-family: "Playball", cursive;
+    font-family: "Poiret One", cursive;
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 100%;
+  }
+
+  body {
+    @apply w-full max-w-full min-h-screen flex flex-col items-center justify-center h-full text-base font-[400] overflow-x-hidden bg-white;
+  }
+
+  .resumeAndLetter,
+  .template {
+    @apply grid overflow-hidden w-[49.60rem] shadow-2xl h-[69.685rem] text-black bg-white text-sm mb-4;
+  }
+
+  .template .tiny-content,
+  .template .large-content {
+    @apply h-auto p-8 px-4 z-10;
+  }
+  .template .tiny-content .tiny-inner,
+  .template .large-content .large-inner {
+    @apply h-[64.685rem] flex flex-col w-full items-start;
+  }
+
+  .template .large-content {
+    background-color: #fff;
+    color: black;
+    z-index: 0;
+  }
+
+  .template .infor-tittle {
+    @apply font-[600] text-base tracking-widest uppercase mb-2 mt-4;
+  }
+  .template .not-require-space {
+    @apply mb-0;
+  }
+  .template .information {
+    @apply w-full flex flex-row space-x-2 items-center mb-2;
+  }
+  .template li {
+    @apply mb-2;
+  }
+  .template ul {
+    @apply list-disc ml-4;
+  }
+
+  .template .user-name-and-profession {
+    @apply flex flex-col items-center justify-center;
+    /* letter-spacing: 0.3rem; */
+  }
+  .template .user-name-and-profession .user-name {
+    @apply text-3xl font-[700];
+  }
+  .template .start-and-end-date {
+    @apply flex flex-row gap-2 text-xs font-[500] my-2 mb-1 text-[#333];
+  }
+
+  .template .box-for-title-and-org {
+    @apply w-full flex flex-row justify-between mb-1 bg-[#eee] p-1;
+  }
+  .template .box-for-title-and-org .jobtitle,
+  .template .box-for-title-and-org .box-for-location {
+    @apply font-[600] text-[#555];
+  }
+  /* template1 */
+  .template1 {
+    grid-template-columns: 1fr 18rem;
+
+    border-left: 0.4rem solid #ff105f;
+  }
+  .template1 .large-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .template1 .tiny-content {
+    background-color: #eeecea;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .template1 .passport-box {
+    @apply w-[7rem] h-[7rem] ring-2 p-1 bg-white ring-[#333] rounded-[50%];
+  }
+  .template1 .profession {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+
+    letter-spacing: 0.1rem;
+    color: #ff105f;
+  }
+
+  .template1 .level {
+    @apply bg-[#333];
+  }
+  .template1 .passport {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 50%;
+    outline: none;
+    border: none;
+  }
+
+  /* template2 */
+  .template2 {
+    grid-template-columns: 18rem 1fr;
+
+    /* border-bottom: 4rem solid #1b2d4f; */
+  }
+  .template2 .user-name-and-profession {
+    @apply col-span-2 row-start-1 row-end-1 bg-[#1b2d4f] text-white min-h-[10rem] space-y-1 text-center;
+  }
+
+  .template2 .passport-box {
+    padding: 0.2rem;
+    border: 0.16rem solid #1b2d4f;
+    width: 10rem;
+    height: 10rem;
+  }
+  .template2 .level {
+    @apply bg-[#1b2d4f];
+  }
+  .template2 .passport {
+    width: 100%;
+    height: 100%;
+  }
+
+  .template2 .profession {
+    text-transform: uppercase;
+
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+  }
+  .template2 .user-name {
+    font-size: 2.5rem;
+  }
+  .template2 .tiny-content,
+  .template4 .tiny-content {
+    /* h [59.685rem]  */
+    @apply -mt-4 ml-4 h-[60.63rem] rounded-t-xl bg-[#d9e3f3] col-span-1;
+  }
+  .template2 .tiny-content .tiny-inner,
+  .template4 .tiny-content .tiny-inner {
+    @apply h-[55rem];
+  }
+  .template2 .large-content,
+  .template4 .large-content {
+    @apply col-start-2 h-[59.63rem];
+    /* h-[61.63rem] */
+    max-width: calc(100% - 1rem);
+  }
+  .template2 .large-content .large-inner,
+  .template4 .large-content .large-inner {
+    @apply h-[54rem];
+  }
+
+  .template3 {
+    /* color: #0b7285; */
+
+    grid-template-columns: 19rem 1fr;
+    grid-template-rows: fit-content fit-content auto;
+    row-gap: 0;
+  }
+
+  .template3 .large-profile {
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    background-color: #cee3e7;
+
+    padding-right: 1rem;
+  }
+  .template3 .large-profile {
+    padding: 1rem;
+    height: 17.199rem;
+    max-height: 17.199rem;
+  }
+  .template3 .profile {
+    max-width: 33rem;
+  }
+  .template3 .user-name-and-profession {
+    grid-column: 1/-1;
+    width: 100%;
+    padding: 1rem;
+    height: 4.438rem;
+    max-height: 4.438rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+    background-color: #0b7285;
+    color: #fff;
+    justify-content: space-around;
+  }
+  .template3 .large-content,
+  .template3 .tiny-content {
+    /* height: 69.685rem - 4.438rem -17.199rem */
+    @apply h-[48rem] pt-0;
+  }
+  .template3 .large-content .large-inner,
+  .template3 .tiny-content .tiny-inner {
+    /* height: 69.685rem - 4.438rem -17.199rem */
+    @apply h-[45rem];
+  }
+  .template3 .user-name {
+    font-size: 2.5rem;
+    word-wrap: normal;
+  }
+  .template3 .tiny-content {
+    background-color: #cee3e7;
+  }
+  .template3 .level {
+    background-color: #0b728b;
+  }
+  .template3 .profession {
+    /* color: #0b7285; */
+    /* background-color: #e7f1f3; */
+    width: fit-content;
+
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    border: 0.1rem solid #fff;
+    font-weight: 600;
+    padding: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .template3 .passport-box {
+    width: 15rem;
+
+    background-color: inherit;
+  }
+  .template3 .passport {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+  }
+  .template4 {
+    grid-template-columns: 18rem 1fr;
+  }
+
+  .template4 .contact-information .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .template-header {
+    width: 100%;
+    height: auto;
+    grid-row: 1;
+    grid-column: 1/-1;
+    min-height: 10rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #660626;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .template4 .level {
+    @apply bg-[#660626];
+  }
+  .template4 .user-name-and-profession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 34rem;
+    min-width: 28rem;
+    justify-content: center;
+  }
+
+  .template4 .passport-box {
+    width: 8rem;
+
+    color: #fff;
+    margin-bottom: 0.5rem;
+    background-color: #660626;
+    border-radius: 50%;
+  }
+  .template4 .passport {
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid #fff;
+    border-radius: 50%;
+  }
+  .template4 .user-name {
+    font-size: 3rem;
+  }
+  .template4 .profession {
+    font-size: 1rem;
+
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding: 0.4rem 0.8rem;
+
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .template4 .tiny-content {
+    background-color: #ffe7ef;
+  }
+  .template5 {
+    grid-template-columns: fit-content 1fr;
+
+    color: #000;
+  }
+  .template5 .tiny-content {
+    @apply bg-[#001300] text-white w-[18rem];
+
+    grid-column: 1;
+  }
+  .template5 .large-content {
+    grid-column: 2;
+    grid-row: 1/-1;
+  }
+  .template5 .level {
+    @apply bg-[#001300];
+  }
+
+  .template5 .passport-box {
+    @apply w-[10rem] h-[10rem] mx-auto rounded-[50%] ring-4 ring-[#fff] p-1;
+  }
+  .template5 .passport {
+    @apply rounded-[50%] w-full h-full;
+  }
+
+  .template6 {
+    display: grid;
+    grid-template-columns: 1fr 18rem;
+    grid-template-rows: auto 1fr;
+    border-right: 0.5rem solid #ff105f;
+    /* color: #791919; */
+  }
+  .template6 .user-name-and-profession {
+    @apply bg-[#ff105f] text-white col-span-2 p-12 row-span-1 text-center mb-6;
+  }
+
+  .template6 .passport-box {
+    @apply w-[7rem] h-[7rem] rounded-[50%] ring-4 p-1 ring-[#ff105f] mb-4 ml-8 mt-8;
+  }
+
+  .template6 .passport {
+    @apply w-[full] h-[full] rounded-[50%];
+  }
+
+  .template6 .infor-tittle {
+    @apply bg-[#ff105f] text-white w-[15rem] py-2 px-4;
+  }
+  .template6 .level-container {
+    @apply bg-[#eeee];
+  }
+  .template6 .level {
+    @apply bg-[#ff105f];
+  }
+  .template6 .large-content {
+    grid-column: 1;
+    grid-row: 2/-1;
+  }
+  .template6 .tiny-content {
+    grid-column: 2;
+    grid-row: 1/-1;
+  }
+  .template6 .profession {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #fff;
+
+    /* letter-spacing: 0.5rem; */
+  }
+  .template6 .user-name {
+    font-size: 2rem;
+  }
+  .template7 {
+    grid-template-columns: 16rem 1fr;
+    grid-template-rows: 10rem 1fr;
+  }
+
+  .template7 .user-name-and-profession {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    height: 10rem;
+    padding-left: 12rem;
+    background-color: #292927;
+
+    color: #be9038;
+
+    font-size: 1.3rem;
+  }
+  .template7 .level {
+    @apply bg-[#292927];
+  }
+  .template7 .user-name-and-profession .profession {
+    color: #fff;
+  }
+  .template7 .tiny-content {
+    grid-row: 1 / -1;
+    grid-column: 1;
+    background-color: #343a40;
+    color: #fff;
+    margin-left: 1rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .template7 .tiny-content .passport-box {
+    @apply rounded-[50%] w-[8rem] h-[8rem] mb-4;
+  }
+  .template7 .tiny-content .passport-box .passport {
+    border-radius: inherit;
+  }
+  .template7 .tiny-content .infor-tittle {
+    @apply bg-[#be9038] px-2 py-1 text-sm min-w-full;
+  }
+  .template7 .tiny-content .inforLabel {
+    color: #be9038;
+  }
+  .template7 .large-content .large-inner {
+    @apply h-[54.685rem] col-start-2 row-start-2;
+  }
+  .template7 .large-content .start-and-end-date {
+    @apply border border-[#888] p-1 mb-2 mt-3;
+  }
+  .template7 .large-content .large-inner .infor-title {
+    border-bottom: 1px solid #888;
+  }
+
+  .template7 .reference span {
+    background-color: #be9038;
+  }
+  .template7 .reference {
+    border-left: #be9038 solid 0.13rem;
+  }
+
+  .template8 {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    grid-template-rows: max-content max-content max-content;
+    border: 1px solid #666;
+    /* padding: 1rem; */
+  }
+  .template8 .level-container {
+    @apply bg-[#915f04];
+  }
+  .template8 .level {
+    @apply bg-white;
+  }
+  .template8 .user-name-and-profession {
+    @apply row-start-1 row-end-1 col-span-2 h-[10rem] text-center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  }
+  .template8 .user-name-and-profession .user-name {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .template8 .user-infor {
+    @apply w-full flex items-center justify-center col-span-2 row-start-2 row-end-2 max-h-[4rem] min-h-[4rem];
+  }
+  .template8 .user-infor .content-wrapper {
+    width: max-content;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: #999;
+    gap: 0;
+  }
+  .template8 .user-infor .content-wrapper .information {
+    min-width: fit-content;
+
+    margin: 1px 0;
+    padding: 1rem 1rem;
+    background: #fff;
+
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+  }
+  .template8 .user-infor .content-wrapper .information .inforVal .header {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .template8 .user-infor .content-wrapper .information .inforVal .val {
+    font-size: 0.8rem;
+  }
+  .template8 .user-infor .content-wrapper .information:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    /* padding-left: 0; */
+  }
+
+  .template8 .user-infor .content-wrapper .information .inforLabel {
+    font-size: 1.5rem;
+    color: #666;
+  }
+  .template8 .user-infor .content-wrapper .information:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    /* padding-right: 0; */
+  }
+  .template8 .tiny-content {
+    border-right: 1px solid #999;
+  }
+
+  .template8 .tiny-content .passport-box {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+
+    border: 1px solid #999;
+    padding: 0.7rem;
+  }
+  .template8 .tiny-content .passport-box .passport {
+    border-radius: inherit;
+  }
+
+  .template8 .large-content .box-for-title-and-org {
+    background: none;
+    /* flex-direction: column; */
+    width: fit-content;
+  }
+  .template8 .tiny-content,
+  .template8 .large-content {
+    @apply h-[55.6rem];
+  }
+  .template8 .tiny-content .tiny-inner,
+  .template8 .large-content .large-inner {
+    @apply h-[51rem];
+  }
+
+  .template9 {
+    padding: 0;
+  }
+  .template9 {
+    border: none;
+    padding: 0;
+    grid-template-columns: 19rem 1fr;
+    grid-template-rows: max-content max-content max-content max-content;
+  }
+  .template9 .template-header {
+    @apply bg-white text-black grid row-span-1 col-span-2 min-w-full;
+    grid-template-rows: fit-content fit-content;
+  }
+  .template9 .profession {
+    grid-row: 1;
+    grid-column: 1/-1;
+    width: 100%;
+    background-color: #e4d9d5;
+    border-bottom: 0.4rem solid #9d736a;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    min-height: 6rem;
+    letter-spacing: 0.5rem;
+  }
+  .template9 .profession-container .profession {
+    grid-column: 2;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    align-self: end;
+  }
+  .template9 .header-wrapper {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 0;
+    margin: 0;
+    margin-right: 2rem;
+    min-height: auto;
+    /* justify-content: center; */
+  }
+  .template9 .header-wrapper .user-name-and-profession {
+    margin: 0;
+    padding: 2rem 0;
+  }
+  .template9 .header-wrapper .contact-information {
+    margin-top: 0;
+  }
+  .template9 .header-wrapper .user-name-and-profession .user-name {
+    margin: 0;
+    text-align: left;
+    font-size: 2.5rem;
+  }
+  .template9 .passportDateOfBirth {
+    grid-column: 1;
+    /* padding: 0 2rem; */
+    height: 100%;
+    grid-row: 2;
+    width: 100%;
+    /* border-bottom: 1px solid #999; */
+    padding: 0 2rem;
+  }
+  .template9 .passportDateOfBirth .passport-box {
+    border: 1px solid #999;
+    margin-top: -3rem;
+    height: calc(100% + 2.2rem);
+    max-height: 17rem;
+    width: fit-content;
+    padding: 0.8rem;
+  }
+  .template9
+    .header-wrapper
+    .contact-information
+    .content-wrapper
+    .information
+    .inforLabel {
+    color: #fff;
+    background-color: #9d736a;
+    border-radius: 50%;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .template9 .passportDateOfBirth .passport-box .passport {
+    /* min-height: 10rem; */
+    height: 100%;
+    /* width: auto; */
+  }
+  .template9 .profile {
+    grid-column: 1/-1;
+    grid-row: 3;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+  }
+  .template9 .profile .inforHeader {
+    position: relative;
+  }
+  .template9 .profile .inforHeader span {
+    position: absolute;
+    background-color: #999;
+    height: 1px;
+    width: 4rem;
+    left: 0;
+    bottom: -1px;
+  }
+  .template9 .tiny-content .informationContainer,
+  .template9 .large-content .informationContainer {
+    border: none;
+    padding: 0;
+  }
+  .template9 .header-wrapper .contact-information .content-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .template9 .large-content,
+  .template9 .tiny-content {
+    padding: 0;
+  }
+  .template9 .large-content .inforHeader,
+  .template9 .tiny-content .inforHeader {
+    letter-spacing: 0.3rem;
+    background-color: #e4d9d5;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .template9 .large-content .informationContainer .content-wrapper,
+  .template9 .tiny-content .informationContainer .content-wrapper {
+    margin: 0 2rem;
+  }
+
+  .template9 .tiny-content .inforHeader {
+    margin-left: 2rem;
+    padding-left: 0.5rem;
+  }
+  .template9 .large-content .inforHeader {
+    margin-right: 2rem;
+    padding-left: 2rem;
+  }
+  .template9 .tiny-content .informationContainer .content-wrapper {
+    margin-left: 2.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .template9 .tiny-content .informationContainer .ul {
+    margin-left: 4rem;
+  }
+  .template9 .large-content .informationContainer .ul {
+    margin-left: 1.5rem;
+  }
+
+  .template9 .large-content .informationContainer {
+    margin-bottom: 1rem;
+  }
+}
